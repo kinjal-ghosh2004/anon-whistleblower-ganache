@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whistleblower Channel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Anonymous Whistleblower Channel</h1>
+
+    <div id="connection-status">Connecting to blockchain...</div>
+    <div id="account-info">
+        <label for="accounts">Select Account (Anonymous Identity):</label>
+        <select id="accounts"></select>
+        <p>Current Account: <strong id="current-account">None</strong></p>
+        <p>Admin Status: <strong id="admin-status">Checking...</strong></p>
+    </div>
+    <hr>
+
+    <div id="admin-panel" style="display: none;">
+        <h2>Admin Panel</h2>
+        <input type="text" id="group-name" placeholder="New Group Name">
+        <button id="create-group-btn">Create Group</button>
+    </div>
+    <hr>
+
+    <h2>Groups</h2>
+    <div id="groups-list">Loading groups...</div>
+    <hr>
+
+    <h2>Selected Group: <span id="selected-group-name">None</span></h2>
+    <div id="chat-area">
+        <div id="members-list"></div>
+        <div id="messages">
+            <p>Select a group to see messages.</p>
+        </div>
+        <div id="message-input-area" style="display: none;">
+            <textarea id="message-content" placeholder="Your anonymous message..."></textarea>
+            <label for="expiry-duration">Expire after (seconds):</label>
+            <input type="number" id="expiry-duration" value="300"> <!-- 5 minutes default -->
+            <button id="send-message-btn">Send Message</button>
+        </div>
+    </div>
+
+    <!-- Include Web3 library -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <!-- Include our app logic -->
+    <script src="app.js"></script>
+</body>
+</html>

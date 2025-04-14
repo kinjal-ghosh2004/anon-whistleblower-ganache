@@ -1,0 +1,17 @@
+{
+  "name": "whistleblower-channel",
+  "version": "1.0.0",
+  "description": "Anonymous whistleblower channel with expiring messages",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server --baseDir=\"./client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

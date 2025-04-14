@@ -1,0 +1,108 @@
+/* client/styles.css */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+#connection-status {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+#account-info, #admin-panel, #groups-list, #chat-area {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"], input[type="number"], textarea {
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    width: 95%;
+    min-height: 60px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 8px;
+}
+
+#messages {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    border-bottom: 1px dotted #ccc;
+    padding: 8px 0;
+    margin-bottom: 5px;
+}
+
+.message.expired {
+    opacity: 0.5;
+    font-style: italic;
+    color: #888;
+}
+
+.message-sender {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #555;
+    display: block; /* Ensure sender is on its own line */
+    margin-bottom: 3px; /* Add space below sender */
+    word-wrap: break-word; /* Wrap long addresses */
+}
+
+
+.message-content {
+    margin-bottom: 3px;
+}
+
+.message-meta {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.group-item {
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
