@@ -112,25 +112,6 @@ Before you begin, ensure you have the following installed:
 *   **Message Expiry:** The `sendMessage` function stores an `expiresAt` timestamp ( `block.timestamp + duration`). The frontend fetches message metadata (including `expiresAt`) or receives messages via events. It then uses JavaScript `Date.now()` comparisons to hide messages where `expiresAt` is in the past. The actual message data (hash) remains on the blockchain indefinitely but the frontend loses access to the content retrieved via the initial event.
 *   **Verification:** The contract calculates `keccak256(abi.encodePacked(messageContent))` and stores this hash. Anyone can theoretically recalculate the hash of alleged original content and compare it to the hash stored on-chain for a given message ID to verify authenticity and non-tampering.
 
-## Directory Structure
-whistleblower-channel/
-├── client/ # Frontend files
-│ ├── index.html # Main HTML page
-│ ├── styles.css # Basic CSS styling
-│ └── app.js # Frontend JavaScript logic (Web3 interaction)
-├── contracts/ # Solidity smart contracts
-│ └── WhistleblowerChat.sol # The main chat contract
-├── migrations/ # Truffle deployment scripts
-│ └── 1_deploy_contracts.js # Script to deploy WhistleblowerChat
-├── test/ # Placeholder for Truffle tests (not implemented in this guide)
-├── build/ # Truffle build artifacts (created after compilation)
-│ └── contracts/
-│ └── WhistleblowerChat.json # Contract ABI and metadata
-├── node_modules/ # Node.js dependencies (created by npm install)
-├── package.json # Project metadata and dependencies
-├── package-lock.json # Exact dependency versions
-└── truffle-config.js # Truffle configuration file (networks, compiler)
-
 ## Future Improvements
 
 *   Implement formal tests using Truffle assertions (`test/` directory).
